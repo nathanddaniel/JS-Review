@@ -1,0 +1,13 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.yellow-button {
+    background-color: yellow;
+    color: black;
+}
+
+.orange-button {
+    background-color: orange;
+    color: black;
+}
