@@ -27,7 +27,11 @@
 
         console.log(product.rating.count);
 
+        console.log(JSON.stringify(product));
 
+        const jsonString = '{"name":"cotton socks","price":299,"rating":{"stars":4.5,"count":87},"newProperty":true}'
+
+        console.log(JSON.parse(jsonString));
 
     </script>
 </body>
