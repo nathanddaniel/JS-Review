@@ -39,15 +39,9 @@
     </p>
 
     <script>
-        const score = JSON.parse(localStorage.getItem('score'));
 
-        if (score === null) {
-            score = {
-                wins: 0,
-                losses: 0,
-                ties: 0
-            };
-        }
+        /* If the left side is truthy, we will use score...otherwise we will use the right side as default using the default operator || */
+        const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 }; 
 
         function playGame(playerMove) {
 
