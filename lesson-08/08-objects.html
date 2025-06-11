@@ -9,7 +9,11 @@
     <script>
         const product = {
             name: 'socks',
-            price: 299
+            price: 299,
+            rating: {
+                stars: 4.5,
+                count: 87
+            }
         };
         console.log(product);
         console.log(product.name);
@@ -20,6 +24,11 @@
 
         product.newProperty = true; 
         console.log(product);
+
+        console.log(product.rating.count);
+
+
+
     </script>
 </body>
 </html>
