@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>Hello</button>
+    <button class="js-button">Second Button</button>
+
+    <script>
+
+        document.querySelector('button').innerHTML = 'Changed';
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+        // /* 
+        // document is an object, we're using dot notation to access the body property 
+        // of the document object. Body is an object and we use dot notation to access 
+        // the innerHTML property within it. Finally, we use the equal sign to change the innerHTML property to 'hello'
+         
+        // document.body.innerHTML = 'Hello'; //this code will remove everything from the website
+
+        // document.title = 'Good Job'; */
+
+        // console.log(document.body);
+
+        // /* this will replace all the HTML content and replace 
+        // it with the text 'Changed' */
+        // document.body.innerHTML = 'Changed'; 
+
+        // /* this will replace all the HTML content and replace
+        // it with a button saying Good Job! */
+        // document.body.innerHTML = '<button>Good Job</button>';
+
+    </script>
+</body>
+</html>
