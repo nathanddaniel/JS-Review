@@ -7,30 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Rock Paper Scissors</p>
+    <p class="title">Rock Paper Scissors</p>
 
     <p>
         <button onclick=" 
-            playGame('rock');
-        ">
-            Rock
+            playGame('rock');"
+            class="move-button"
+        >
+            <img src="./images/paper-emoji.png" class="move-icon">
         </button>
 
         <button onclick="
-            playGame('paper');
-        ">
-            Paper
+            playGame('paper');"
+            class="move-button"
+        >
+            <img src="./images/paper-emoji.png" class="move-icon">
         </button>
 
         <button onclick="
-            playGame('scissors');
-        ">
-            Scissors
+            playGame('scissors');"
+            class="move-button"
+        >
+            <img src="./images/scissors-emoji.png" class="move-icon">
         </button>
 
-        <p class="js-result"></p>
-        <p class="js-moves"></p>
-        <p class="js-score"></p>
+        <p class="js-result result">You Win</p>
+        <p class="js-moves">
+            You 
+            <img src="./images/rock-emoji.png" class="move-icon">
+            <img src="./images/scissors-emoji.png" class="move-icon">
+            Computer
+        </p>
+        <p class="js-score score"></p>
 
         <button onclick="
             score.wins = 0;
@@ -39,7 +47,7 @@
 
             localStorage.removeItem('score');
             updateScoreElement();
-        ">
+        " class="reset-score-button">
             Reset Button
         </button>
     </p>
@@ -101,7 +109,9 @@
             updateScoreElement();
 
             document.querySelector('.js-result').innerHTML = `${result}`;
-            document.querySelector('.js-moves').innerHTML = `You: ${playerMove} - Computer: ${computerMove}`;
+            document.querySelector('.js-moves').innerHTML = `You <img src="./images/${playerMove}-emoji.png" class="move-icon">
+            <img src="./images/${computerMove}-emoji.png" class="move-icon">
+            Computer`;
             
         }
 
